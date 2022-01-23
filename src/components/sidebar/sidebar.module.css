@@ -1,0 +1,26 @@
+.sidebar {
+  padding: 17px 33px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.sidebarLinks {
+  margin: 2rem 0;
+}
+.sidebarLink {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 15px 30px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #1e0d03;
+  font-size: 18px;
+}
+
+.sidebarLink.active {
+  font-weight: 600;
+  background-color: var(--link-color);
+  color: #fff;
+}
