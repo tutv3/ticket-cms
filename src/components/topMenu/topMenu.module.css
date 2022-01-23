@@ -3,12 +3,14 @@
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  padding: 17px;
+  padding: 1rem;
+  padding-bottom: 0;
 }
 .avatar img {
   width: 50px;
   height: 50px;
   border-radius: 50px;
+  cursor: pointer;
 }
 .rightMenu {
   display: flex;
@@ -34,7 +36,7 @@
 }
 .form input {
   font-size: 16px;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   color: #444;
   min-width: 300px;
 }

@@ -34,3 +34,9 @@ select:focus,
 textarea:focus {
   outline: none;
 }
+.page-container {
+  background-color: #fff;
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
