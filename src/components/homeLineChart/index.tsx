@@ -45,8 +45,10 @@ const HomeLineChart = () => {
             return val + ' tr';
           }
         }
-      }
+      },
+      colors: ['#FD9B45', '#546E7A', '#E91E63', '#FF9800']
     },
+
   });
 
   return (

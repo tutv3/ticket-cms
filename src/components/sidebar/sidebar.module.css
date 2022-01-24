@@ -24,6 +24,10 @@
   background-color: var(--link-color);
   color: #fff;
 }
+.sidebarLink.active svg {
+  color: #fff !important;
+  height: 1.5rem;
+}
 .sidebarBottom p {
   font-size: 14px;
   text-align: center;
