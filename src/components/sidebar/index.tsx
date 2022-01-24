@@ -1,4 +1,3 @@
-import React from "react";
 import Logo from "../logo";
 import { NavLink } from 'react-router-dom';
 import { AiFillHome } from 'react-icons/ai';
@@ -6,11 +5,17 @@ import { HiOutlineTicket } from 'react-icons/hi';
 import { BsCardChecklist } from 'react-icons/bs'
 import { FiSettings } from 'react-icons/fi'
 import styles from './sidebar.module.css';
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
 
 const Sidebar = () => {
+  const { sidebar } = useSelector((state: RootState) => state.global);
+
   const activeSidebarLink = [styles.active, styles.sidebarLink].join(' ');
+  const sidebarClasses = [styles.sidebar, sidebar.isShow ? styles.show : ''].join(' ');
+
   return (
-    <div className={styles.sidebar}>
+    <div className={sidebarClasses}>
       <div>
         <NavLink to="/"
           className={styles.sidebarLink}>
