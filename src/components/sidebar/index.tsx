@@ -12,7 +12,10 @@ const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
       <div>
-        <Logo />
+        <NavLink to="/"
+          className={styles.sidebarLink}>
+          <Logo />
+        </NavLink>
         <ul className={styles.sidebarLinks}>
           <NavLink to="/"
             className={({ isActive }) => isActive ? activeSidebarLink : styles.sidebarLink}>

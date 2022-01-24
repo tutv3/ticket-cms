@@ -24,3 +24,18 @@
   background-color: var(--link-color);
   color: #fff;
 }
+.sidebarBottom p {
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    position: absolute;
+    background-color: #fff;
+    z-index: 100;
+    border-right: 1px solid #ccc;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
+  }
+}
