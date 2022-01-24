@@ -13,7 +13,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e5e5e5;
+  background-color: #f9f6f4;
 }
 
 code {
@@ -39,4 +39,10 @@ textarea:focus {
   margin: 1rem;
   padding: 1.5rem;
   border-radius: 1rem;
+}
+.react-calendar {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 4px 4px 15px rgba(109, 46, 0, 0.35);
+  background-color: #fff;
 }

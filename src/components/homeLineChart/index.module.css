@@ -1,21 +1,18 @@
-.row {
+.header {
   display: flex;
-  gap: 1.5rem;
-  margin: 1.5rem 0;
   justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
 }
-.col {
-  max-width: 300px;
-}
-.colTitle {
-  text-align: center;
+.header h3 {
+  font-weight: 500;
 }
 .date {
   position: relative;
 }
 .calendar {
   position: absolute;
-  left: 0;
+  right: 0;
   z-index: 50;
 }
 .dateOutput {
@@ -33,22 +30,13 @@
   cursor: pointer;
   border: none;
 }
-.col:last-child {
-  align-self: center;
-}
-.specs {
-  display: flex;
-  align-items: center;
+.total {
   margin-bottom: 1.5rem;
 }
-.badge {
-  width: 44px;
-  height: 20px;
-  border-radius: 4px;
-  display: inline-block;
-  margin-right: 1.5rem;
-  background-color: rgba(79, 117, 255, 1);
-}
-.badgeText {
+.total p {
   font-size: 14px;
+  margin-bottom: 1rem;
+}
+.total strong {
+  font-size: 24px;
 }
