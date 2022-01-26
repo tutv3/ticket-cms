@@ -1,6 +1,7 @@
 import TicketList from "../../components/ticketList";
 import tickets from "../../assets/data/tickets";
 import TicketHeader from "../../components/TicketHeader";
+import TicketFilterPanel from "../../components/TicketFilterPanel";
 
 const Tickets = () => {
   return (
@@ -8,6 +9,7 @@ const Tickets = () => {
       <h1 className="page-title">Danh sách vé</h1>
       <TicketHeader />
       <TicketList list={tickets} />
+      <TicketFilterPanel />
     </div>
   );
 };

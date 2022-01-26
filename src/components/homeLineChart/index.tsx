@@ -8,6 +8,7 @@ import { AiOutlineCalendar } from "react-icons/ai";
 const HomeLineChart = () => {
   const [profitDate, setProfitDate] = useState(new Date());
   const [showProfitDate, setShowProfitDate] = useState(false);
+
   const [chartData] = useState({
     series: [
       {
@@ -61,7 +62,7 @@ const HomeLineChart = () => {
               {profitDate.toDateString()}
             </div>
             <button onClick={() => setShowProfitDate(prevState => !prevState)}>
-              <AiOutlineCalendar size={24} />
+              <AiOutlineCalendar size={24} color="#FF993C" />
             </button>
           </div>
           <div className={styles.calendar}>

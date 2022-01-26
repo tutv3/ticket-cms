@@ -37,28 +37,26 @@ export function HomeDoughnutChart() {
   const [showProfitDate, setShowProfitDate] = useState(false);
   return (
     <div className={styles.row}>
-      <div>
-        <div className={styles.date}>
-          <div className={styles.dateOutput}>
-            <div>
-              {profitDate.toDateString()}
-            </div>
-            <button onClick={() => setShowProfitDate(prevState => !prevState)}>
-              <AiOutlineCalendar size={24} />
-            </button>
+      <div className={styles.date}>
+        <div className={styles.dateOutput}>
+          <div>
+            {profitDate.toDateString()}
           </div>
-          <div className={styles.calendar}>
-            {
-              showProfitDate && <Calendar
-                onChange={(dateStr: Date) => {
-                  setProfitDate(dateStr);
-                  setShowProfitDate(false);
-                }}
-                value={profitDate}
-                defaultView="month"
-              />
-            }
-          </div>
+          <button onClick={() => setShowProfitDate(prevState => !prevState)}>
+            <AiOutlineCalendar size={24} color="#FF993C" />
+          </button>
+        </div>
+        <div className={styles.calendar}>
+          {
+            showProfitDate && <Calendar
+              onChange={(dateStr: Date) => {
+                setProfitDate(dateStr);
+                setShowProfitDate(false);
+              }}
+              value={profitDate}
+              defaultView="month"
+            />
+          }
         </div>
       </div>
       <div className={styles.col}>

@@ -1,7 +1,15 @@
-import { HIDE_SIDEBAR, SHOW_SIDEBAR } from "../types";
+import {
+  HIDE_SIDEBAR,
+  SHOW_SIDEBAR,
+  SHOW_FILTER_PANEL,
+  HIDE_FILTER_PANEL,
+} from "../types";
 
 const initialState = {
   sidebar: {
+    isShow: false,
+  },
+  ticketFilterPanel: {
     isShow: false,
   },
 };
@@ -20,6 +28,16 @@ const globalReducer = (
       return {
         ...state,
         sidebar: { isShow: false },
+      };
+    case SHOW_FILTER_PANEL:
+      return {
+        ...state,
+        ticketFilterPanel: { isShow: true },
+      };
+    case HIDE_FILTER_PANEL:
+      return {
+        ...state,
+        ticketFilterPanel: { isShow: false },
       };
     default:
       return state;

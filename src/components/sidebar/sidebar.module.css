@@ -1,5 +1,5 @@
 .sidebar {
-  padding: 17px 33px;
+  padding: 16px 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,10 +17,10 @@
   border-radius: 8px;
   color: #1e0d03;
   font-size: 18px;
+  width: 200px;
 }
 
 .sidebarLink.active {
-  font-weight: 600;
   background-color: var(--link-color);
   color: #fff;
 }

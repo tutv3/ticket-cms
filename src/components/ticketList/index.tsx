@@ -1,3 +1,4 @@
+import { convertTicketStatusToVnm } from "../../utils/convert";
 import styles from "./index.module.css";
 
 export interface ITicket {
@@ -18,7 +19,7 @@ const TicketList = (props: { list: ITicket[] }) => {
     <div>
       <ul className={styles.ticketList}>
         <li className={[styles.ticketItem, styles.ticketItemHead].join(" ")}>
-          <strong>STT</strong>
+          <strong className={styles.no}>STT</strong>
           <strong>Booking code</strong>
           <strong>Số vé</strong>
           <strong>Tình trạng sử dụng</strong>
@@ -28,10 +29,21 @@ const TicketList = (props: { list: ITicket[] }) => {
         </li>
         {list.slice(0, 10).map((ticket, index) => (
           <li key={ticket.id} className={styles.ticketItem}>
-            <span>{index + 1}</span>
+            <span className={styles.no}>{index + 1}</span>
             <span>{ticket.bookingCode}</span>
             <span>{ticket.id}</span>
-            <span>{ticket.status}</span>
+            <span>
+              <div
+                className={[
+                  styles.statusWrapper,
+                  ticket.status === "expired" ? styles.expired : "",
+                  ticket.status === "not-used" ? styles.notUsed : "",
+                ].join(" ")}
+              >
+                <div className={styles.dot}></div>
+                <div className={styles.status}>{convertTicketStatusToVnm(ticket.status)}</div>
+              </div>
+            </span>
             <span>{ticket.usedDate || "-"}</span>
             <span>{ticket.createdDate}</span>
             <span>{ticket.checkInPort || "-"}</span>
