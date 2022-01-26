@@ -45,3 +45,9 @@
 .buttons button:hover {
   background-color: rgba(255, 153, 60, 0.1);
 }
+@media (max-width: 650px) {
+  .ticketHeader {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
