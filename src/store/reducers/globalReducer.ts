@@ -6,7 +6,7 @@ const initialState = {
   },
 };
 
-const ticketReducer = (
+const globalReducer = (
   state = initialState,
   action: { type: string; payload: any }
 ) => {
@@ -26,4 +26,4 @@ const ticketReducer = (
   }
 };
 
-export default ticketReducer;
+export default globalReducer;

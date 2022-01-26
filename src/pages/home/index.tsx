@@ -1,7 +1,5 @@
-import React from "react";
 import { HomeDoughnutChart } from "../../components/homeDoughnutChart";
 import HomeLineChart from "../../components/homeLineChart";
-// import styles from "./home.module.css";
 
 const Home = () => {
   return (

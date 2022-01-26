@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from './pages/home';
 import TopMenu from './components/topMenu';
+import Tickets from './pages/tickets/Tickets';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <TopMenu />
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/tickets' element={<Tickets />} />
           </Routes>
         </div>
       </div>

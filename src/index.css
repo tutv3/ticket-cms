@@ -46,3 +46,6 @@ textarea:focus {
   box-shadow: 4px 4px 15px rgba(109, 46, 0, 0.35);
   background-color: #fff;
 }
+.page-title {
+  font-weight: 500;
+}

@@ -29,7 +29,7 @@ const Sidebar = () => {
               Trang chủ
             </span>
           </NavLink>
-          <NavLink to="/ticket" className={({ isActive }) => isActive ? activeSidebarLink : styles.sidebarLink}>
+          <NavLink to="/tickets" className={({ isActive }) => isActive ? activeSidebarLink : styles.sidebarLink}>
             <HiOutlineTicket color="#1E0D03" size={18} /> <span>Quản lý vé</span>
           </NavLink>
           <NavLink to="/check" className={({ isActive }) => isActive ? activeSidebarLink : styles.sidebarLink}>
